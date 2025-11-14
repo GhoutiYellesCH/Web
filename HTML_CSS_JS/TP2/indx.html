@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TP1 - DAW</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <header style="background-color:#b3e6ff; color:darkblue;">
+        <table style="width: 100%">
+            <tr>
+                <td width="5%">
+                    <center><img src="logo-onat.png" width="250px"></center>
+                </td>
+                <td width="90%" align="center">
+                    <center><img src="recrutement.png" width="200px"></center>
+                </td>
+                </td>
+                <td width="5%">
+                    <a href="www.facebook.com"><img src="facebook.png" width="30px"></a><br>
+                    <a href="www.facebook.com"><img src="twitter.png" width="30px"></a><br>
+                    <a href="www.facebook.com"><img src="instagram.png" width="30px"></a>
+                </td>
+            </tr>
+        </table>
+        <nav style="background-color:yellow; color:red;">
+            <ul align="center" style="color: white;">
+                <li style="display:inline"><a href="lien1.html">Accueil</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li style="display:inline"><a href="lien2.html">Monuments par ville</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </li>
+                <li style="display:inline"><a href="lien3.html">Nos services</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li style="display:inline"><a href="lien4.html">Nous contacter</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h2>Postuler pour devenir <i>&laquo; Guide Touristique &raquo;</i></h2>
+        <form method="POST" action="reception.PHP" width="100%">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend><b><u>INFORMATIONS PERSONNELLES</u></b></legend>
+                            <table>
+                                <tr>
+                                    <td width="50%">
+                                        <label><b>Nom (*)</b></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" size="40" maxlength="15" pattern="[a-zA-Z]+" required>
+                                        <label>Le nom doit contenir que des lettres</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label><b>Prénom (*)</b></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" size="40" maxlength="15" pattern="[a-zA-Z]+" required>
+                                        <label>Le nom doit contenir que des lettres</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label><b>Civilité </b></label></td>
+                                    <td align="center">
+                                        <label>M. </label><input type="radio" name="civilite" checked>
+                                        <label>Mme. </label><input type="radio" name="civilite">
+                                        <label>Mlle. </label><input type="radio" name="civilite">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label><b>Naissance (*)</b></label></td>
+                                    <td><input type="date" min="1970-01-01" max="1990-01-01" required> à
+                                        <select name="ville">
+                                            <option selected>Tlemcen</option>
+                                            <option>Oran</option>
+                                            <option>Alger</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label><b>Téléphone (*)</b></label>
+                                    </td>
+                                    <td>
+                                        <input type="text" size="40" pattern="0(5|6|7|9)[0-9]{8}" required>
+                                        <label>Téléphone mobile incorrect</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label><b>Photos de vous</b></label></td>
+                                    <td><input type="file" accept=".PNG, .JPG" multiple></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="70%">
+                                        <label>permis de condriute</label>
+                                    </td>
+                                    <td width="15%">
+                                        <label>oui</label>
+                                        <input type="radio" name="permis" required>
+                                    </td>
+                                    <td width="15%">
+                                        <label>non</label>
+                                        <input type="radio" name="permi" required>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                    <td width="50%">
+                        <fieldset>
+                            <legend><b><u>COMPETENCES</u></b></legend>
+                            <table width="100%">
+                                <td><label><b>Niveau universitaire</b></label></td>
+                                <td>
+                                    <label><b>BAC + </b></label>
+                                    <input type="number" value="1" min="1" max="5">
+                                </td>
+                                <tr>
+                                    <td><label><b>Langues maîtrisées (*)</b></label></td>
+                                    <td>
+                                        <select name="langues" size="3" multiple>
+                                            <option selected>Arabe</option>
+                                            <option>Français</option>
+                                            <option>Anglais</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label><b>Diplômes &amp; certificats (*)</b></label></td>
+                                    <td><input type="file" accept=".PDF" multiple></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td colspan="2">
+                                        <hr>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label><b>Vos qualités</b></label></td>
+                                    <td>
+                                        <label><i>Passionné</i></label><input type="checkbox" checked>
+                                        <label><i>Dynamique</i></label><input type="checkbox">
+                                        <label><i>Esprit de groupe</i></label><input type="checkbox">
+                                        <label><i>Organisé</i></label><input type="checkbox" checked><br>
+                                        <textarea cols="60" rows="2">Décrivez-vous plus ici...</textarea>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <fieldset id="dernier_fieldset">
+                            <legend align="center"><b>FINALISATION DE L'INSCRIPTION</b></legend>
+                            <table align="center">
+                                <tr>
+                                    <td align="right"><b>Mot de passe d'inscription (*)</b></td>
+                                    <td align="left"><input type="password" pattern="[a-zA-Z0-9]*[A-Z][a-zA-Z0-9]*"
+                                            maxlength="10" required /></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><input value="reset" type="reset" value="" /></td>
+                                    <td align="left"><input value="submit" type="submit" value="" /></td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <footer align="center" style="background-color:#FFCC99;">
+        <table width="100%">
+            <tr>
+                <td align="left">Copyright © 2020</td>
+                <td align="right"><a href="mailto:auteur@gmail.com"><a href="www.facebook.com"><img
+                                src="contact-email.png" width="30px"></a></a></td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
+</html>
