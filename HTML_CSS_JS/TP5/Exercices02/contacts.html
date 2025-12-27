@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <title>Gestion des Contacts</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .message { color: green; margin-bottom: 10px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .form-group { margin-bottom: 15px; }
+        input, button { padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Gestion des Contacts</h2>
+    
+    
+    <!-- Formulaire d'ajout -->
+    <h3>Ajouter un contact</h3>
+     <div class="form-group">
+      <form method="post" action="gestion-contacts.php">
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input type="tel"  name="telephone"  placeholder="ex:0552-93-50-30" pattern="0(5|6|7)[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required>
+            <input type="email" name="email" placeholder="email@exemple.dz" pattern="[a-zA-Z0-9._\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}" required>
+            <button type="submit" name="Ajouter">Ajouter</button>
+     </form>
+    </div>
+    <!-- Formulaire de supression -->
+     <h3>Suprimmer un contact</h3>
+     <div class="form-group">
+      <form method="get" action="gestion-contacts.php">
+        <input type="text" name="supprimerEmail" placeholder="Supprimer par email" value="">
+        <button type="submit" name="Supprimer">Supprimer</button>
+      </form>
+    </div>
+    <!-- Formulaire de recherche -->
+    <h3>Rechercher un contact</h3>
+    <div class="form-group">
+      <form method="get" action="gestion-contacts.php">
+        <input type="text" name="rechercheTerme" placeholder="Un mot clé pour la recherche" value="">
+        <button type="submit" name="Rechercher">Rechercher</button>
+      </form>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<style type="text/css">
+ body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            /*display: flex;*/
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            max-width: 70%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        div {
+            margin: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<body>
+    <h1>Veuillez remplir le formulaire :</h1>
+<div class="container">
+    <form action="traitement.php" method="post">
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+        <div>
+            <label>Langages de programmation préférés :</label><br>
+            <input type="checkbox" id="php" name="langages[]" value="PHP">
+           PHP
+            <input type="checkbox" id="javascript" name="langages[]" value="JavaScript">
+            JavaScript
+            <input type="checkbox" id="python" name="langages[]" value="Python">
+            Python<br>
+        </div>
+        <div>
+            <label>Votre niveau :</label><br>
+            <input type="radio" id="debutant" name="niveau" value="Débutant" checked>
+            Débutant 
+            <input type="radio" id="intermediaire" name="niveau" value="Intermédiaire">
+            Intermédiaire
+            <input type="radio" id="avance" name="niveau" value="Avancé">
+            Avancé
+        </div>
+        <div>
+            <label for="ville">Votre Ville :</label>
+            <select id="ville" name="ville" placeholder="Sélectionnez une ville">
+                <option value="tlemcen" selected>Tlemcen</option>
+                <option value="oran">Oran</option>
+                <option value="alger">Alger</option>
+            </select><br>
+        </div>
+        <div>
+            <label for="commentaire" id="comment">Commentaire :</label><br>
+            <textarea id="commentaire" name="commentaire"></textarea><br>
+        </div>
+        <input type="submit" value="Envoyer">
+    </form>
+<div>
+</body>
+</html>
